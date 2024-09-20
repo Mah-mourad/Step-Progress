@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Dancing Script", cursive;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg,#d2001a,#7462ff);
+}
+.all{
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hello{
+    font-size: 140px;
+    text-align: center;
+    padding-top: 60px;
+    color:  rgb(111, 13, 126);
+}
+.range0{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.range,
+.range2,
+.range3,
+.range4{
+    background: rgb(217, 220, 220);
+    width: 200px;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .6s ease;
+}
+@media (max-width:1055px) {
+    .range,
+    .range2,
+.range3,
+.range4{
+        width: 80px;
+    }
+}
+.selector,
+.selector2,
+.selector3,
+.selector4,
+.selector5{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    border: 8px solid rgb(223, 226, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .6s ease;
+}
+.selector{
+    border: 8px solid rgb(151, 48, 247);
+}
+@media (max-width:575px) {
+    .range,
+    .range2,
+.range3,
+.range4{
+        width: 50px;
+    }
+    .selector,
+.selector2,
+.selector3,
+.selector4,
+.selector5{
+    width: 35px;
+    height: 35px;
+}
+}
+.check5,
+.check2,
+.check3,
+.check4{
+    display: none;
+    transition: all .6s ease;
+}
+.selector::after{
+   content: "Start";
+   position: absolute;
+   bottom: -35px;
+   font-size: 20px;
+   font-weight: 900;
+   color: rgb(151, 48, 247);
+   transition: all .6s ease;
+}
+.selector2::after{
+   content: "Step1";
+   position: absolute;
+   bottom: -35px;
+   font-size: 20px;
+   font-weight: 900;
+   color: rgb(151, 48, 247);
+   display: var(--after, none);
+   transition: all .6s ease;
+}
+.selector3::after{
+   content: "Step2";
+   position: absolute;
+   bottom: -35px;
+   font-size: 20px;
+   font-weight: 900;
+   color: rgb(151, 48, 247);
+   display: var(--after, none);
+   transition: all .6s ease;
+}
+.selector4::after{
+   content: "Step3";
+   position: absolute;
+   bottom: -35px;
+   font-size: 20px;
+   font-weight: 900;
+   color: rgb(151, 48, 247);
+   display: var(--after, none);
+   transition: all .6s ease;
+}
+.selector5::after{
+   content: "Final";
+   position: absolute;
+   bottom: -35px;
+   font-size: 20px;
+   font-weight: 900;
+   color: rgb(151, 48, 247);
+   display: var(--after, none);
+   transition: all .6s ease;
+}
+.controls{
+    position: relative;
+    display: flex;
+    gap: 70px;
+    bottom: -100px;
+    left: -25px;
+}
+.controls .controlR,
+.controls .controlL{
+    position: relative;
+
+}
+.right1,
+.left4{
+    z-index: 1;
+}
+.controls .controlR .right{
+    position: absolute;
+    background-color: rgb(196, 47, 219);
+    padding: 15px 22px;
+    border-radius: 5px;
+    box-shadow: 0 2px rgb(152, 151, 151);
+}
+.controls .controlR .right1,
+.controls .controlR .right2,
+.controls .controlR .right3,
+.controls .controlR .right4{
+    position: absolute;
+    background-color: rgb(193, 28, 218);
+    padding: 15px 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px .2 rgb(152, 151, 151);
+    transition: all .6s ease;
+}
+.controls .controlL .left1,
+.controls .controlL .left2,
+.controls .controlL .left3,
+.controls .controlL .left4{
+    position: absolute;
+    background-color: rgb(193, 28, 218);
+    padding: 15px 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px .2 rgb(152, 151, 151);
+    transition: all .6s ease;
+}
+.controls .controlR .right1:hover,
+.controls .controlR .right2:hover,
+.controls .controlR .right3:hover,
+.controls .controlR .right4:hover,
+.controls .controlL .left1:hover,
+.controls .controlL .left2:hover,
+.controls .controlL .left3:hover,
+.controls .controlL .left4:hover{
+    background-color: rgb(166, 4, 191);
+}
+@media (max-width:575px) {
+    .controls .controlL .left1,
+.controls .controlL .left2,
+.controls .controlL .left3,
+.controls .controlL .left4,
+.controls .controlR .right1,
+.controls .controlR .right2,
+.controls .controlR .right3,
+.controls .controlR .right4{
+    padding: 10px 17px;
+}
+}
